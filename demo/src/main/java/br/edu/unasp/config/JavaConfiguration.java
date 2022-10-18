@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JavaConfiguration {
 
-    @Bean(name = "applicationName  ")
+    @Bean(name = "applicationName")
     public String applicationName(){
         return "Sistema de Cadastro de Produtos";
     }
