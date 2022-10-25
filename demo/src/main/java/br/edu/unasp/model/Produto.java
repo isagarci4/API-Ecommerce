@@ -1,20 +1,27 @@
 package br.edu.unasp.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import org.springframework.web.multipart.MultipartFile;
 
+@Entity(name="PRODUTO")
 public class Produto {
-        
-    private Long id;
+    
+    @Id
+	@GeneratedValue
+    private Integer id;
     private String nome;
     private String descricao;
-    private Double valor;
+    private Float valor;
     private MultipartFile imagem;
 
     public Produto(){
         super();
     }
 
-    public Produto(Long id, String nome, String descricao, Double valor, MultipartFile imagem){
+    public Produto(Integer id, String nome, String descricao, Float valor, MultipartFile imagem){
         super();
 
         this.id = id;
@@ -24,11 +31,11 @@ public class Produto {
         this.imagem = imagem;
     }
 
-    public Long getId(){
+    public Integer getId(){
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(Integer id){
         this.id = id;
     }
 
@@ -49,11 +56,11 @@ public class Produto {
 
     }
 
-    public Double getValor(){
+    public Float getValor(){
         return valor;
     }
 
-    public void setValor(Double valor){
+    public void setValor(Float valor){
         this.valor = valor;
     }
 

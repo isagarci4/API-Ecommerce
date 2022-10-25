@@ -1,10 +1,11 @@
 package br.edu.unasp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.edu.unasp.model.Produto;
 import br.edu.unasp.model.repository.ProdutoRepository;
-
+@Service
 public class ProdutoService {
     
     @Autowired
