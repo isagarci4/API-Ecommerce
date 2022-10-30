@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.springframework.web.multipart.MultipartFile;
-
 @Entity(name="PRODUTO")
 public class Produto {
     
@@ -15,13 +13,13 @@ public class Produto {
     private String nome;
     private String descricao;
     private Float valor;
-    private MultipartFile imagem;
+    private String imagem;
 
     public Produto(){
         super();
     }
 
-    public Produto(Integer id, String nome, String descricao, Float valor, MultipartFile imagem){
+    public Produto(Integer id, String nome, String descricao, Float valor, String imagem){
         super();
 
         this.id = id;
@@ -64,11 +62,11 @@ public class Produto {
         this.valor = valor;
     }
 
-    public MultipartFile getImagem(){
+    public String getImagem(){
         return imagem;
     }
 
-    public void setImagem(MultipartFile imagem){
+    public void setImagem(String imagem){
         this.imagem = imagem;
     }
 }

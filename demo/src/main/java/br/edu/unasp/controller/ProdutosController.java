@@ -27,7 +27,7 @@ public class ProdutosController {
 	}
 	
 	@GetMapping("/produtos/{id}")
-	public ResponseEntity<Produto> getProduto(@PathVariable Long id){
+	public ResponseEntity<Produto> getProduto(@PathVariable Integer id){
 		return ResponseEntity.ok().body(produtoService.getProduto(id));
 	}
 	
@@ -44,7 +44,7 @@ public class ProdutosController {
 	}
 	
 	@DeleteMapping("/produtos/{id}")
-	public ResponseEntity<Void> apagarProduto(@PathVariable Long id){
+	public ResponseEntity<Void> apagarProduto(@PathVariable Integer id){
 		var produto = produtoService.getProduto(id);
 		produtoService.deleteProduto(produto);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);

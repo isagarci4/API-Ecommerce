@@ -19,7 +19,7 @@ public class ProdutoService {
 		repository.save(produto);
 	}
 	
-	public Produto getProduto(Long id) {
+	public Produto getProduto(Integer id) {
 		return repository.findById(id).orElse(null);
 	}
 	

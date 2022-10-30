@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.edu.unasp.model.Produto;
 
 @Repository
-public interface ProdutoRepository extends CrudRepository<Produto, Long>  {
+public interface ProdutoRepository extends CrudRepository<Produto, Integer>  {
     
 }
