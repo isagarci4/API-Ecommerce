@@ -3,9 +3,9 @@ package br.edu.unasp.model.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import br.edu.unasp.model.Produto;
+import br.edu.unasp.model.Carrinho;
 
 @Repository
-public interface ProdutoRepository extends CrudRepository<Produto, Integer>  {
+public interface CarrinhoRepository extends CrudRepository<Carrinho, Integer>  {
     
 }
